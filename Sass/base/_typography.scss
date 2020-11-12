@@ -1,0 +1,22 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.heading-primary {
+    color: var(--color-white);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    font-weight: 500;
+    animation: moveInLeft 1s ease-in-out;
+}
+
+.heading-secondary {
+    color: var(--color-white);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    font-weight: 500;
+}

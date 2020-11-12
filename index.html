@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" href="img/logo.svg" />
+		<title>Trivia</title>
+	</head>
+	<body>
+		<main class="container">
+			<!-- MISC -->
+			<div class="circle circle-1">&nbsp;</div>
+			<div class="circle circle-2">&nbsp;</div>
+			<div class="circle circle-3">&nbsp;</div>
+			<div class="circle circle-4">&nbsp;</div>
+			<!-- MISC -->
+
+			<!-- HEADER -->
+			<header class="header">
+				<div class="header__logo">
+					<img src="img/logo.svg" alt="Logo" class="header__icon" />
+					<div class="header__text">Trivia</div>
+				</div>
+			</header>
+			<!-- HEADER -->
+
+			<!-- MAIN TEXT -->
+			<section class="welcome-section">
+				<div class="welcome">
+					<h1 class="heading-primary">Prepare your brain</h1>
+					<p class="welcome__desc">
+						This game will test your knowledge of either general culture or a
+						specific topic of your choice
+					</p>
+					<a href="#" class="btn btn--outline btn--animated">Start now!</a>
+				</div>
+			</section>
+			<!-- MAIN TEXT -->
+
+			<!-- GAME SETTINGS -->
+			<section class="settings-section">
+				<div class="settings">
+					<form action="" class="settings_form">
+						<h2 class="heading-secondary">Select your game</h2>
+						<div class="settings__form-group">
+							<input
+								type="number"
+								id="number"
+								min="5"
+								max="50"
+								placeholder="Number of questions"
+							/>
+						</div>
+						<div class="settings__form-group">
+							<select
+								name="answer_category"
+								id="category"
+								class="settings__select-box"
+							>
+								<option value="" class="settings__option">Category</option>
+							</select>
+						</div>
+						<div class="settings__form-group">
+							<select
+								name="answer_difficulty"
+								id="difficulty"
+								class="settings__select-box"
+							>
+								<option value="" class="settings__option">Difficulty</option>
+							</select>
+						</div>
+						<div class="settings__form-group">
+							<select name="answer_type" id="type" class="settings__select-box">
+								<option value="" class="settings__option">
+									Type of answers
+								</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- GAME SETTINGS -->
+		</main>
+	</body>
+</html>

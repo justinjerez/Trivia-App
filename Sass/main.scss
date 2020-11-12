@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+@import "abstracts/animation";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/_base";
+@import "base/typography";
+
+@import "components/button";
+@import "components/settings";
+@import "components/welcome";
+
+@import "layout/_header";
+
+@import "pages/home";

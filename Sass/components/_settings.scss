@@ -1,0 +1,45 @@
+.settings {
+	text-align: center;
+
+	&__form {
+		&-group {
+			padding: 1rem 0;
+		}
+	}
+
+	& input {
+		font-size: 1.4rem;
+		background: transparent;
+		color: var(--color-white);
+		border: var(--border-white);
+		border-radius: 10rem;
+		padding: 0.3rem 1.5rem;
+		letter-spacing: 1.6px;
+
+		&::placeholder {
+            color: --color-white;
+            opacity: 1;
+		}
+
+		&:active {
+			outline: none;
+		}
+        
+        /* hiding up and down arrows     */
+		&[type="number"] {
+			-webkit-appearance: textfield;
+			-moz-appearance: textfield;
+			appearance: textfield;
+		}
+		&[type="number"]::-webkit-inner-spin-button,
+		&[type="number"]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+		}
+	}
+
+	&__select-box {
+	}
+
+	&__option {
+	}
+}

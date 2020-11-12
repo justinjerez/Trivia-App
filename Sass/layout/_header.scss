@@ -1,0 +1,23 @@
+.header {
+    position: absolute;
+    top: 2rem;
+    left: 2.5rem;
+    animation: moveInLeft .8s ease-in-out;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 2.5rem;
+        margin-right: .5rem;
+    }
+
+    &__text {
+        font-size: 1.65rem;
+        font-weight: 200;
+        padding-top: .75rem;
+        color: var(--color-white);
+    }
+}

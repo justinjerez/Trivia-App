@@ -1,0 +1,60 @@
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+
+	background: linear-gradient(
+		to left,
+        var(--color-primary-light)60%,
+        var(--color-primary-dark) 90%
+    );
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--color-white);
+
+    &-1 {
+        width: 15rem;
+        height: 15rem;
+        bottom: -5rem;
+        left: -5rem;
+        filter: opacity(.2);
+    }
+
+    &-2 {
+        width: 5rem;
+        height: 5rem;
+        top: -2rem;
+        right: -2.5rem;
+        filter: opacity(.3);
+    }
+
+    &-3 {
+        width: 30rem;
+        height: 30rem;
+        top: -15rem;
+        left: -10rem;
+        filter: opacity(.09);
+    }
+
+    &-4 {
+        width: 24rem;
+        height: 24rem;
+        bottom: -15rem;
+        right: -10rem;
+        filter: opacity(.17);
+    }
+}
+
+.welcome-section {
+    display: none;
+    @include absCentral;
+    
+}
+
+.settings-section {
+    @include absCentral;
+}

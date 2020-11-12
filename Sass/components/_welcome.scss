@@ -1,0 +1,17 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &__desc {
+        color: var(--color-white);
+        width: 52%;
+        font-size: 1.2rem;
+        padding: .5rem 0 1rem 0;
+        font-weight: 200;
+        line-height: 1.4;
+        animation: moveInRight .7s ease-in-out;
+        animation-fill-mode: backwards;
+    }
+}   
