@@ -53,34 +53,82 @@
 							/>
 						</div>
 						<div class="settings__form-group">
-							<select
-								name="answer_category"
-								id="category"
-								class="settings__select-box"
-							>
-								<option value="" class="settings__option">Category</option>
-							</select>
+							<div class="settings__select-box">
+								<div
+									class="settings__options-container"
+									id="options-container"
+								></div>
+								<div class="settings__selected" id="selected">Category</div>
+							</div>
 						</div>
 						<div class="settings__form-group">
-							<select
-								name="answer_difficulty"
-								id="difficulty"
-								class="settings__select-box"
-							>
-								<option value="" class="settings__option">Difficulty</option>
-							</select>
+							<div class="settings__select-box">
+								<div class="settings__options-container">
+									<div class="settings__option">
+										<input
+											type="radio"
+											name="difficulty"
+											id="1"
+											class="settings__radio"
+										/>
+										<label for="1">Easy</label>
+									</div>
+
+									<div class="settings__option">
+										<input
+											type="radio"
+											name="difficulty"
+											id="2"
+											class="settings__radio"
+										/>
+										<label for="2">Medium</label>
+									</div>
+									<div class="settings__option">
+										<input
+											type="radio"
+											name="difficulty"
+											id="3"
+											class="settings__radio"
+										/>
+										<label for="3">Hard</label>
+									</div>
+								</div>
+								<div class="settings__selected" id="selected">Difficulty</div>
+							</div>
 						</div>
 						<div class="settings__form-group">
-							<select name="answer_type" id="type" class="settings__select-box">
-								<option value="" class="settings__option">
-									Type of answers
-								</option>
-							</select>
+							<div class="settings__select-box">
+								<div class="settings__options-container">
+									<div class="settings__option">
+										<input
+											type="radio"
+											name="type_of_answer"
+											id="1"
+											class="settings__radio"
+										/>
+										<label for="1">Multiple Choice</label>
+									</div>
+									<div class="settings__option">
+										<input
+											type="radio"
+											name="type_of_answer"
+											id="2"
+											class="settings__radio"
+										/>
+										<label for="2">True / False</label>
+									</div>
+								</div>
+								<div class="settings__selected" id="selected">
+									Type of answer
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
 			</section>
 			<!-- GAME SETTINGS -->
 		</main>
+
+		<script src="js/custom-select-box.js"></script>
 	</body>
 </html>

@@ -1,0 +1,76 @@
+.settings {
+    &__select-box {
+        display: flex;
+        width: 340px;
+        flex-direction: column;
+    }
+
+    &__options-container {
+        font-size: 1.2rem;
+        color: white;
+        border: 1px solid var(--color-white);
+        border-radius: 10px;
+        height: 0;
+        opacity: 0;
+        transition: all .4s ease-in-out;
+        font-weight: 300;
+        letter-spacing: 4.5px;
+        overflow: hidden;
+        order: 1;
+    }
+    
+    &__options-container::-webkit-scrollbar {
+        width: 1rem;
+        border-radius: 0 10px 10px 0;
+    }
+
+    &__options-container::-webkit-scrollbar-thumb {
+        background-color: var(--color-white);
+        border-radius: 0 10px 10px 0;
+    }
+
+    &__options-container.active {
+        height: 240px;
+        opacity: 1;
+        overflow-y: scroll;
+        margin-top: 1.5rem;
+    }
+
+    &__options-container.active &__selected {
+        margin-bottom: 1.5rem;
+    }
+
+    &__selected {
+        color: var(--color-white);
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 4.5px;
+        border: 1px solid var(--color-white);
+        border-radius: 10rem;
+        order: 0;
+    }
+
+    &__option {
+        padding: 0 1.5rem;
+        width: 100%;
+    }
+
+    &__option, &__selected {
+        cursor: pointer;
+    }
+
+    &__option:hover {
+        background-color: var(--color-white);
+        color: var(--color-primary-dark);
+    }
+
+    &__option, &__selected {
+        padding: 1rem 1.5rem;
+        text-align: start;
+    }
+
+    &__select-box &__option &__radio {
+        display: none;
+    }
+}
