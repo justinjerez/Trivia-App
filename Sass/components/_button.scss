@@ -10,11 +10,6 @@
     outline: none;
     cursor: pointer;
     transition: all .6s;
-
-    &--animated {
-        animation: moveInBottom .5s ease-in .5s;
-        animation-fill-mode: backwards;
-    }
 }
 
 .btn:hover {

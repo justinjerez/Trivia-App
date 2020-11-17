@@ -1,60 +1,78 @@
 .container {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-wrap: none;
+    overflow-x: scroll;
 
 	background: linear-gradient(
 		to left,
-        var(--color-primary-light)60%,
-        var(--color-primary-dark) 90%
-    );
-    overflow: hidden;
+		var(--color-primary-light) 60%,
+		var(--color-primary-dark) 90%
+	);
+	overflow: hidden;
 }
 
 .circle {
-    position: absolute;
-    border-radius: 50%;
-    background-color: var(--color-white);
+	position: absolute;
+	border-radius: 50%;
+	background-color: var(--color-white);
 
-    &-1 {
-        width: 15rem;
-        height: 15rem;
-        bottom: -5rem;
-        left: -5rem;
-        filter: opacity(.2);
-    }
+	&-1 {
+		width: 15rem;
+		height: 15rem;
+		bottom: -5rem;
+		left: -5rem;
+		filter: opacity(0.2);
+	}
 
-    &-2 {
-        width: 5rem;
-        height: 5rem;
-        top: -2rem;
-        right: -2.5rem;
-        filter: opacity(.3);
-    }
+	&-2 {
+		width: 5rem;
+		height: 5rem;
+		top: -2rem;
+		right: -2.5rem;
+		filter: opacity(0.3);
+	}
 
-    &-3 {
-        width: 30rem;
-        height: 30rem;
-        top: -15rem;
-        left: -10rem;
-        filter: opacity(.09);
-    }
+	&-3 {
+		width: 30rem;
+		height: 30rem;
+		top: -15rem;
+		left: -10rem;
+		filter: opacity(0.09);
+	}
 
-    &-4 {
-        width: 24rem;
-        height: 24rem;
-        bottom: -15rem;
-        right: -10rem;
-        filter: opacity(.17);
-    }
+	&-4 {
+		width: 24rem;
+		height: 24rem;
+		bottom: -15rem;
+		right: -10rem;
+		filter: opacity(0.17);
+	}
 }
 
 .welcome-section {
-    display: none;
-    @include absCentral;
-    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    transition: all 1s ease-in-out;
 }
 
 .settings-section {
-    @include absCentral;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    transition: all 1s ease-in-out;
+}
+
+.container.to-settings .welcome-section {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.container.to-settings .settings-section {
+    transform: translateX(-100%);
 }
