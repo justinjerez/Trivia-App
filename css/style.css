@@ -80,7 +80,8 @@ body {
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  transition: all .6s; }
+  transition: all .6s;
+  background-color: transparent; }
 
 .btn:hover {
   background-color: var(--color-white);
@@ -94,11 +95,11 @@ body {
 .settings__options-container {
   font-size: 1.2rem;
   color: white;
-  border: 1px solid var(--color-white);
-  border-radius: 10px;
+  border-bottom: 1px solid var(--color-white);
+  /* border-radius: 10px 0 0 10px; */
   height: 0;
   opacity: 0;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   font-weight: 300;
   letter-spacing: 4.5px;
   overflow: hidden;
@@ -106,36 +107,54 @@ body {
 
 .settings__options-container::-webkit-scrollbar {
   width: 1rem;
-  border-radius: 0 10px 10px 0; }
+  background-color: var(--color-primary-dark);
+  /* border-radius: 0 10px 10px 0; */ }
 
 .settings__options-container::-webkit-scrollbar-thumb {
   background-color: var(--color-white);
-  border-radius: 0 10px 10px 0; }
+  border-radius: 10px; }
 
 .settings__options-container.active {
   height: 240px;
   opacity: 1;
-  overflow-y: scroll;
-  margin-top: 1.5rem; }
-
-.settings__options-container.active .settings__selected {
-  margin-bottom: 1.5rem; }
+  overflow-y: scroll; }
 
 .settings__selected {
+  position: relative;
   color: var(--color-white);
   font-size: 1.3rem;
   text-align: center;
   font-weight: 400;
   letter-spacing: 4.5px;
-  border: 1px solid var(--color-white);
-  border-radius: 10rem;
+  border-bottom: 1px solid var(--color-white);
   order: 0; }
+  .settings__selected-categories::after, .settings__selected-difficulty::after, .settings__selected-type::after {
+    position: absolute;
+    font-size: 1rem;
+    top: .5rem;
+    left: 1.5rem;
+    color: var(--color-tertiary); }
+  .settings__selected-categories::after {
+    content: "Category"; }
+  .settings__selected-difficulty::after {
+    content: "Difficulty"; }
+  .settings__selected-type::after {
+    content: "Type of answer"; }
+
+.settings__selected.settings__selected-categories, .settings__selected.settings__selected-difficulty, .settings__selected.settings__selected-type {
+  padding-top: 2.5rem; }
 
 .settings__option {
   padding: 0 1.5rem;
   width: 100%; }
 
-.settings__option, .settings__selected {
+.settings__option label {
+  display: block;
+  height: 100%;
+  width: 100%; }
+
+.settings__option, .settings__selected,
+.settings label {
   cursor: pointer; }
 
 .settings__option:hover {
@@ -154,11 +173,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex; }
+  display: flex;
+  text-align: center; }
   .settings__form {
     display: flex;
     flex-direction: column; }
     .settings__form-group {
+      position: relative;
       padding: 1rem 0;
       display: flex;
       justify-content: center; }
@@ -167,8 +188,8 @@ body {
     font-size: 1.4rem;
     background: transparent;
     color: var(--color-white);
-    border: var(--border-white);
-    border-radius: 10rem;
+    border: none;
+    border-bottom: 1px solid var(--color-white);
     padding: 1rem 1.5rem;
     letter-spacing: 4.5px;
     font-weight: 200;
@@ -188,6 +209,14 @@ body {
       appearance: textfield; }
     .settings input[type="number"]::-webkit-inner-spin-button, .settings input[type="number"]::-webkit-outer-spin-button {
       -webkit-appearance: none; }
+  .settings input[type=number] + label {
+    position: absolute;
+    font-size: 1rem;
+    top: 0rem;
+    left: 7rem;
+    color: var(--color-tertiary);
+    font-weight: 400;
+    letter-spacing: 4.5px; }
 
 .welcome {
   position: absolute;
@@ -221,14 +250,17 @@ body {
   animation: moveInLeft .8s ease-in-out; }
   .header__logo {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
   .header__icon {
     width: 2.5rem;
-    margin-right: .5rem; }
+    margin-right: .5rem;
+    z-index: 1; }
   .header__text {
     font-size: 1.65rem;
     font-weight: 200;
     padding-top: .75rem;
+    z-index: 1;
     color: var(--color-white); }
 
 .container {

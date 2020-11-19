@@ -18,7 +18,10 @@
 
 			<!-- HEADER -->
 			<header class="header">
-				<div class="header__logo">
+				<div
+					class="header__logo"
+					onclick="javascript:location.href='index.html'"
+				>
 					<img src="img/logo.svg" alt="Logo" class="header__icon" />
 					<div class="header__text">Trivia</div>
 				</div>
@@ -33,7 +36,9 @@
 						This game will test your knowledge of either general culture or a
 						specific topic of your choice
 					</p>
-					<a href="#" class="btn btn--outline welcome__btn" id="to-settings">Start now!</a>
+					<a href="#" class="btn btn--outline welcome__btn" id="to-settings"
+						>Start now!</a
+					>
 				</div>
 			</section>
 			<!-- MAIN TEXT -->
@@ -42,7 +47,9 @@
 			<section class="settings-section">
 				<div class="settings">
 					<form action="" class="settings_form">
-						<h2 class="heading-secondary u-margin-bottom-small">Select your game</h2>
+						<h2 class="heading-secondary u-margin-bottom-small">
+							Select your game
+						</h2>
 						<div class="settings__form-group">
 							<input
 								type="number"
@@ -50,7 +57,9 @@
 								min="5"
 								max="50"
 								placeholder="Number of questions"
+								required
 							/>
+							<label for="number">Questions number</label>
 						</div>
 						<div class="settings__form-group">
 							<div class="settings__select-box">
@@ -58,7 +67,12 @@
 									class="settings__options-container"
 									id="options-container"
 								></div>
-								<div class="settings__selected" id="selected">Category</div>
+								<div
+									class="settings__selected settings__selected-categories"
+									id="selected"
+								>
+									Select category
+								</div>
 							</div>
 						</div>
 						<div class="settings__form-group">
@@ -68,61 +82,70 @@
 										<input
 											type="radio"
 											name="difficulty"
-											id="1"
+											id="easy"
 											class="settings__radio"
 										/>
-										<label for="1">Easy</label>
+										<label for="easy">Easy</label>
 									</div>
 
 									<div class="settings__option">
 										<input
 											type="radio"
 											name="difficulty"
-											id="2"
+											id="medium"
 											class="settings__radio"
 										/>
-										<label for="2">Medium</label>
+										<label for="medium">Medium</label>
 									</div>
 									<div class="settings__option">
 										<input
 											type="radio"
 											name="difficulty"
-											id="3"
+											id="hard"
 											class="settings__radio"
 										/>
-										<label for="3">Hard</label>
+										<label for="hard">Hard</label>
 									</div>
 								</div>
-								<div class="settings__selected" id="selected">Difficulty</div>
+								<div
+									class="settings__selected settings__selected-difficulty"
+									id="selected"
+								>
+									Select difficulty
+								</div>
 							</div>
 						</div>
-						<div class="settings__form-group">
+						<div class="settings__form-group u-margin-bottom-small">
 							<div class="settings__select-box">
 								<div class="settings__options-container">
 									<div class="settings__option">
 										<input
 											type="radio"
 											name="type_of_answer"
-											id="1"
+											id="multiple"
 											class="settings__radio"
 										/>
-										<label for="1">Multiple Choice</label>
+										<label for="multiple">Multiple Choice</label>
 									</div>
 									<div class="settings__option">
 										<input
 											type="radio"
 											name="type_of_answer"
-											id="2"
+											id="boolean"
 											class="settings__radio"
 										/>
-										<label for="2">True / False</label>
+										<label for="boolean">True / False</label>
 									</div>
 								</div>
-								<div class="settings__selected" id="selected">
-									Type of answer
+								<div
+									class="settings__selected settings__selected-type"
+									id="selected"
+								>
+									Select a type
 								</div>
 							</div>
 						</div>
+						<button type="submit" class="btn btn--outline">Get started</button>
 					</form>
 				</div>
 			</section>

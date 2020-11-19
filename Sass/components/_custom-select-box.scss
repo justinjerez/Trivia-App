@@ -1,77 +1,107 @@
 .settings {
+	&__select-box {
+		display: flex;
+		width: 340px;
+		flex-direction: column;
+	}
 
-    &__select-box {
-        display: flex;
-        width: 340px;
-        flex-direction: column;
-    }
+	&__options-container {
+		font-size: 1.2rem;
+		color: white;
+		border-bottom: 1px solid var(--color-white);
+		/* border-radius: 10px 0 0 10px; */
+		height: 0;
+		opacity: 0;
+		transition: all 0.4s ease-in-out;
+		font-weight: 300;
+		letter-spacing: 4.5px;
+		overflow: hidden;
+		order: 1;
+	}
 
-    &__options-container {
-        font-size: 1.2rem;
-        color: white;
-        border: 1px solid var(--color-white);
-        border-radius: 10px;
-        height: 0;
-        opacity: 0;
-        transition: all .4s ease-in-out;
-        font-weight: 300;
-        letter-spacing: 4.5px;
-        overflow: hidden;
-        order: 1;
-    }
-    
-    &__options-container::-webkit-scrollbar {
-        width: 1rem;
-        border-radius: 0 10px 10px 0;
-    }
+	&__options-container::-webkit-scrollbar {
+		width: 1rem;
+		background-color: var(--color-primary-dark);
+		/* border-radius: 0 10px 10px 0; */
+	}
 
-    &__options-container::-webkit-scrollbar-thumb {
-        background-color: var(--color-white);
-        border-radius: 0 10px 10px 0;
-    }
+	&__options-container::-webkit-scrollbar-thumb {
+		background-color: var(--color-white);
+		border-radius: 10px;
+	}
 
-    &__options-container.active {
-        height: 240px;
-        opacity: 1;
-        overflow-y: scroll;
-        margin-top: 1.5rem;
-    }
+	&__options-container.active {
+		height: 240px;
+		opacity: 1;
+		overflow-y: scroll;
+	}
 
-    &__options-container.active &__selected {
-        margin-bottom: 1.5rem;
-    }
+	&__selected {
+        position: relative;
+		color: var(--color-white);
+		font-size: 1.3rem;
+		text-align: center;
+		font-weight: 400;
+		letter-spacing: 4.5px;
+		border-bottom: 1px solid var(--color-white);
+		order: 0;
 
-    &__selected {
-        color: var(--color-white);
-        font-size: 1.3rem;
-        text-align: center;
-        font-weight: 400;
-        letter-spacing: 4.5px;
-        border: 1px solid var(--color-white);
-        border-radius: 10rem;
-        order: 0;
-    }
+        &-categories::after, &-difficulty::after, &-type::after {
+            position: absolute;
+            font-size: 1rem;
+            top: .5rem;
+            left: 1.5rem;
+            color: var(--color-tertiary);
+        }
 
-    &__option {
-        padding: 0 1.5rem;
-        width: 100%;
-    }
-
-    &__option, &__selected {
-        cursor: pointer;
-    }
-
-    &__option:hover {
-        background-color: var(--color-white);
-        color: var(--color-primary-dark);
-    }
-
-    &__option, &__selected {
-        padding: 1rem 1.5rem;
-        text-align: start;
+		&-categories::after {
+            content: "Category";
+        }
+        
+		&-difficulty::after {
+            content: "Difficulty";
+        }
+        
+		&-type::after {
+            content: "Type of answer";
+		}
     }
 
-    &__select-box &__option &__radio {
-        display: none;
+    &__selected.settings__selected-categories,
+    &__selected.settings__selected-difficulty, 
+    &__selected.settings__selected-type {
+        padding-top: 2.5rem;
     }
+
+	&__option {
+		padding: 0 1.5rem;
+		width: 100%;
+	}
+
+	&__option label {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__option,
+	&__selected,
+	label {
+		cursor: pointer;
+	}
+
+	&__option:hover {
+		background-color: var(--color-white);
+		color: var(--color-primary-dark);
+	}
+
+	&__option,
+	&__selected {
+		padding: 1rem 1.5rem;
+		text-align: start;
+	}
+
+	&__select-box &__option &__radio {
+		display: none;
+	}
 }

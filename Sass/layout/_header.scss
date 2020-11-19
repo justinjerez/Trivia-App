@@ -7,17 +7,20 @@
     &__logo {
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
 
     &__icon {
         width: 2.5rem;
         margin-right: .5rem;
+        z-index: 1;
     }
 
     &__text {
         font-size: 1.65rem;
         font-weight: 200;
         padding-top: .75rem;
+        z-index: 1;
         color: var(--color-white);
     }
 }
