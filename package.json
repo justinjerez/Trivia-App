@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "autoprefixer": "^10.0.2",
     "concat": "^1.0.3",
     "gulp-concat": "^2.6.1",

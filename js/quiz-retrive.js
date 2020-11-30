@@ -1,53 +1,3 @@
-const getCategories = () => {
-    fetch('https://opentdb.com/api_category.php')
-        .then(res => res.json())
-        .then(res => insertCategories(res))
-        .then(res => expandContainers())
-        .then(res => optionsListener())
-        .catch(res => console.log(res))
-}
-
-const insertCategories = (data) => {
-    document.querySelector('#options-container').innerHTML =
-        `
-        ${data['trivia_categories'].map((category) => {
-            return `
-        <div class="settings__option">
-                <input type="radio" name="category" id="${category['id']}" class="settings__radio" />
-                <label for="${category['id']}">${category['name']}</label>
-        </div>`
-        }).join('')}
-    `
-
-    return document.querySelectorAll('.settings__option')
-}
-
-const expandContainers = () => {
-    document.querySelectorAll('.settings__selected').forEach(option => {
-        option.addEventListener('click', () => {
-            document.querySelectorAll('.settings__options-container')
-                .forEach(container => {
-                    if (container != option.previousElementSibling) {
-                        container.classList.remove('active')
-                    }
-                })
-            option.previousElementSibling.classList.toggle('active')
-        })
-    })
-}
-
-const optionsListener = () => {
-    document.querySelectorAll('.settings__option')
-        .forEach(option => {
-            option.addEventListener('click', () => {
-                option.parentElement.classList.remove('active')
-                option.parentElement.nextElementSibling.innerHTML = option.lastElementChild.innerHTML
-                option.parentElement.nextElementSibling.id = option.firstElementChild.id
-            })
-        })
-}
-
-getCategories()
 // Setting things up for starting the questionary
 document.querySelector('#start')
     .addEventListener('click', (event) => {
@@ -126,6 +76,7 @@ document.querySelector('#next').addEventListener('click', (e) => {
     // Save the current question user is watching
     const current = document.querySelector('.current')
     const answers = current.lastElementChild.children
+
     Array.prototype.forEach.call(answers, answer => {
         if (answer.firstElementChild.checked) {
             if (current.nextElementSibling) {
@@ -149,22 +100,4 @@ document.querySelector('#prev').addEventListener('click', (e) => {
         current.classList.remove('current')
     }
 })
-
-
-const mainContainer = document.querySelector('main.container')
-
-// Transition to the setting section
-document.querySelector('#to-settings')
-    .addEventListener('click', () => {
-        mainContainer.classList.remove('to-quiz')
-        mainContainer.classList.add('to-settings')
-    })
-
-
-// Transition to the quiz
-document.querySelector('#start')
-    .addEventListener('click', (event) => {
-        mainContainer.classList.remove('to-settings')
-        mainContainer.classList.add('to-quiz')
-    })
 

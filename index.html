@@ -8,7 +8,7 @@
 		<title>Trivia</title>
 	</head>
 	<body>
-		<main class="container">
+		<main class="container to-settings">
 			<!-- MISC -->
 			<div class="circle circle-1">&nbsp;</div>
 			<div class="circle circle-2">&nbsp;</div>
@@ -47,7 +47,7 @@
 			<section class="settings-section">
 				<div class="settings">
 					<form action="" class="settings_form">
-						<h2 class="heading-secondary u-margin-bottom-small">
+						<h2 class="heading-secondary u-margin-bottom-medium">
 							Select your game
 						</h2>
 						<div class="settings__form-group">
@@ -67,10 +67,7 @@
 									class="settings__options-container"
 									id="options-container"
 								></div>
-								<div
-									class="settings__selected settings__selected-categories"
-									id="selected"
-								>
+								<div class="settings__selected settings__selected-categories">
 									Select category
 								</div>
 							</div>
@@ -107,10 +104,7 @@
 										<label for="hard">Hard</label>
 									</div>
 								</div>
-								<div
-									class="settings__selected settings__selected-difficulty"
-									id="selected"
-								>
+								<div class="settings__selected settings__selected-difficulty">
 									Select difficulty
 								</div>
 							</div>
@@ -137,21 +131,31 @@
 										<label for="boolean">True / False</label>
 									</div>
 								</div>
-								<div
-									class="settings__selected settings__selected-type"
-									id="selected"
-								>
+								<div class="settings__selected settings__selected-type">
 									Select a type
 								</div>
 							</div>
 						</div>
-						<button type="submit" class="btn btn--outline">Get started</button>
+						<button type="submit" class="btn btn--outline" id="start">
+							Get started
+						</button>
 					</form>
 				</div>
 			</section>
 			<!-- GAME SETTINGS -->
-		</main>
 
+			<!-- QUIZ SECTION -->
+			<section class="quiz-section">
+				<div class="quiz">
+					<div class="quiz__questions" id="question-container"></div>
+					<div class="quiz__controls">
+						<button class="btn" id="prev">Previous</button>
+						<button class="btn" id="next">Next</button>
+					</div>
+				</div>
+			</section>
+			<!-- QUIZ SECTION -->
+		</main>
 		<script src="main.js"></script>
 	</body>
 </html>

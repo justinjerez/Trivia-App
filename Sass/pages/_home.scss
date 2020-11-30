@@ -1,11 +1,7 @@
 .container {
 	position: relative;
-	width: 100%;
     height: 100vh;
     display: flex;
-    flex-wrap: none;
-    overflow-x: scroll;
-
 	background: linear-gradient(
 		to left,
 		var(--color-primary-light) 60%,
@@ -52,15 +48,7 @@
 	}
 }
 
-.welcome-section {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    transition: all 1s ease-in-out;
-}
-
-.settings-section {
+.welcome-section,  .settings-section, .quiz-section{
     position: relative;
     width: 100%;
     height: 100%;
@@ -75,4 +63,18 @@
 
 .container.to-settings .settings-section {
     transform: translateX(-100%);
+}
+
+.container.to-quiz .welcome-section {
+    transform: translateX(-200%);
+    opacity: 0;
+}
+
+.container.to-quiz .settings-section {
+	transform: translateX(-200%);
+	opacity: 0;
+}
+
+.container.to-quiz .quiz-section {
+	transform: translateX(-200%);
 }
