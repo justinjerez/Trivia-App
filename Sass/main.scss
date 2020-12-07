@@ -12,9 +12,11 @@
 @import "base/_base";
 @import "base/typography";
 
+@import "components/_alert";
 @import "components/button";
 @import "components/custom-select-box";
 @import "components/quiz";
+@import "components/results";
 @import "components/settings";
 @import "components/welcome";
 

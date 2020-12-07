@@ -8,13 +8,21 @@
 		<title>Trivia</title>
 	</head>
 	<body>
-		<main class="container to-settings">
+		<main class="container">
 			<!-- MISC -->
 			<div class="circle circle-1">&nbsp;</div>
 			<div class="circle circle-2">&nbsp;</div>
 			<div class="circle circle-3">&nbsp;</div>
 			<div class="circle circle-4">&nbsp;</div>
 			<!-- MISC -->
+
+			<!-- ALERTS -->
+			<div class="alert">
+				<div class="alert__message">
+					
+				</div>
+			</div>
+			<!-- ALERTS -->
 
 			<!-- HEADER -->
 			<header class="header">
@@ -148,13 +156,22 @@
 			<section class="quiz-section">
 				<div class="quiz">
 					<div class="quiz__questions" id="question-container"></div>
-					<div class="quiz__controls">
+					<div class="quiz__controls u-margin-bottom-small">
 						<button class="btn" id="prev">Previous</button>
 						<button class="btn" id="next">Next</button>
 					</div>
+					<button class="btn" id="results">Results</button>
 				</div>
 			</section>
 			<!-- QUIZ SECTION -->
+
+			<!-- RESULTS -->
+			<section class="results-section">
+				<div class="results" id="results-section">
+					<div class="results__questions"></div>
+				</div>
+			</section>
+			<!-- RESULTS -->
 		</main>
 		<script src="main.js"></script>
 	</body>

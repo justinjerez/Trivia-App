@@ -1,0 +1,20 @@
+.alert {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid var(--color-white);
+    padding: 2rem 3.5rem;
+    transition: all .5s;
+
+    &.active {
+        top: -2%;
+    }
+
+    &__message {
+        font-size: 1.4rem;
+        color: var(--color-white);     
+    }
+}
